@@ -15,7 +15,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 7px 7px #77a;
+    box-shadow: 5px 5px #88d;
     box-sizing: border-box;
 }
 
@@ -23,7 +23,8 @@ body{
     list-style: none;
     padding-left: 0; 
     width: 130px;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 500;
     /* border: 1px solid black; */
 }
 
@@ -37,7 +38,7 @@ body{
     background-color: #88d;
     border-radius: 10px;
     box-shadow: 4px 5px #ccf;
-    padding: 12px 0;
+    padding: 14px 0;
     width: 100%;
     display: inline-block;
     text-align: center;
@@ -51,6 +52,13 @@ form.card>*{
     margin: 15px 0;
     width: 100%;
     box-sizing: border-box;
+}
+
+form.card>button{
+    background-color: #88d;
+    color: #fff;
+    padding: 8px 0;
+    font-weight: 500;
 }
 
 form.space-lg>*{
