@@ -6,27 +6,53 @@ body{
 
 .card{
     width: 350px;
-    height: 350px;
+    height: 300px;
     margin-top: 100px;
-    border: 1px solid black;
+    padding: 30px 50px;
+    border: 1px solid #77a;
     background-color: #eef;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 5px 5px #77a;
-}
-
-.card--centercontent{
     justify-content: center;
+    box-shadow: 7px 7px #77a;
+    box-sizing: border-box;
 }
 
 .menu{
     list-style: none;
-    padding-left: 0;
-    font-size: 26px;
+    padding-left: 0; 
+    width: 130px;
+    font-size: 24px;
     /* border: 1px solid black; */
 }
 
 .menu li{
-    margin-bottom: 40px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.menu li a{ 
+    letter-spacing: 2px;
+    background-color: #88d;
+    border-radius: 10px;
+    box-shadow: 4px 5px #ccf;
+    padding: 12px 0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+form>*{
+    padding: 5px 8px;
+    font-size:  16px;
+    margin: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button{
+
 }
