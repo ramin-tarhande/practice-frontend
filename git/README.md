@@ -1,5 +1,5 @@
-## git miniproject
-# Ramin Tarhande
+# git miniproject
+### Ramin Tarhande
 
 This miniproject is part of **front-end development course** and its purpose is to practise working with **git** version control system.
 The source code includes some simple pages created with html & css. 
