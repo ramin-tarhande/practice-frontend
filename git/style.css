@@ -45,7 +45,7 @@ body{
     color: #fff;
 }
 
-form>*{
+form.card>*{
     padding: 5px 8px;
     font-size:  16px;
     margin: 15px 0;
@@ -53,6 +53,11 @@ form>*{
     box-sizing: border-box;
 }
 
-button{
-
+form.space-lg>*{
+    margin: 15px 0;
 }
+
+form.space-sm>*{
+    margin: 10px 0;
+}
+
