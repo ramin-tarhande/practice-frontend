@@ -1,0 +1,60 @@
+@mixin dim($size1,$size2:$size1) {
+    width: $size1;
+    height: $size2;
+}
+
+.center-text{
+    text-align: center !important;
+} 
+
+.gridTable{
+    margin-bottom: 0 !important;
+    // & td{
+    //     user-select: none;
+    // }
+}
+
+.gridBar{
+    //border: 1px solid #aaa;
+    background-color: #efefe0;
+    padding: .1rem .7rem .2rem .7rem;
+}
+
+.icon>svg{
+    @include dim(1.1rem);
+    cursor: pointer;
+    fill: black;
+    margin: 0 .3em;
+}
+
+.icon--edit>svg{
+    fill: #39e;
+}
+
+.icon--delete>svg{
+    @include dim(.9rem,1rem);
+    fill: #a22;
+}
+
+.icon--apply>svg{
+    @include dim(1.3rem,1rem);
+}
+
+.icon--add>svg{
+    @include dim(1.6rem);
+    fill: #082;
+}
+
+.icon--pagination>svg{
+    @include dim(1.5rem,1.5rem);
+    //display: inline-block;
+    fill: black;
+    margin: 0 .2em;
+}
+
+.currentPage{
+    padding: 0 .7em;
+    vertical-align: middle;
+    background-color: #fefefa;
+    user-select: none;
+}

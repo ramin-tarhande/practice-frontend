@@ -1,0 +1,2 @@
+tsc --watch
+sass --watch style.scss:build/style.css

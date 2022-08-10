@@ -1,0 +1,17 @@
+@use './grids/grid.scss';
+
+.navbar{
+    //background-color: #515569 !important;
+    background-color: #515577 !important;
+}
+
+.nav-link {
+   color: rgba(255, 255, 255, .9) !important;
+  //color: #495057 !important;
+  //color: rgba(0, 0, 0, 0.9) !important;
+  //color: #fff!important;
+}
+
+.fw-6{
+    font-weight: 600;
+}

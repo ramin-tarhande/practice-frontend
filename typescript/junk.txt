@@ -1,0 +1,38 @@
+   // addPropTds(item: Type) {
+   //    const props = Object.getOwnPropertyNames(item);
+   //    type ObjectKey = keyof typeof item; //https://bobbyhadz.com/blog/typescript-access-object-property-dynamically
+   //    for (let p of props) {
+   //       const pv = String(item[p as ObjectKey]);
+   //       this.addTd(pv);
+   //    }
+   // }
+
+
+class GridFactory<Type>{
+
+   private data:Type[];
+   private gridContainer:HTMLElement;
+   private metadata:MetaData[];
+   // private metadataMap:Map<string,MetaData>;
+   // private propNames:string[];
+   constructor(gridContainer:HTMLElement,metadata:MetaData[],data:Type[]){
+      this.data=data;
+      this.metadata=metadata;
+      this.gridContainer=gridContainer;
+      // this.metadataMap=this.createMetadataMap(metadata);
+      // this.propNames=this.createPropNames(metadata);
+      // console.log(this.metadataMap);
+      // console.log(this.propNames);
+   }
+
+   // private createMetadataMap(metadata:MetaData[]):Map<string,MetaData>{
+   //    return metadata.reduce((ac,i)=>{
+   //       return ac.set(i.name,i);
+   //    },new Map<string,MetaData>());
+   // }
+
+   // private createPropNames(metadata:MetaData[]):string[]{
+   //    return metadata.map(x=>x.name);
+   // }
+...
+}
