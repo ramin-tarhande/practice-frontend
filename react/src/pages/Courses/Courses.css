@@ -1,0 +1,71 @@
+.courses-page{
+    width: 100%;
+}
+
+.general-image{
+    width: 100%;
+    height: 130px;
+}
+
+.courses-title{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.cards-container{
+    margin-top: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.cards-row{
+    /* box-sizing: border-box; */
+    width: 100%;
+}
+
+.card{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+    text-align: center;
+    height: 17rem !important;
+}
+
+.btn-a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-a:hover{
+    color: inherit;
+}
+
+.card-title{
+    font-size: 18px !important;
+    font-weight: 700 !important;
+} 
+
+.card-img-top{
+    max-width:90px;
+    max-height:90px;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+}
+
+.card-text{
+    margin: 10px 0;
+}
+
+.card .btn{
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.failure{
+    font-size: 16px;
+    color: #c22;
+}
+

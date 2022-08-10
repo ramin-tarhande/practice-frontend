@@ -1,0 +1,9 @@
+.contact-us-container{
+    padding-top: 50px;
+}
+.contact-us-container div{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    margin:10px
+}

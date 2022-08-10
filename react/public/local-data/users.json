@@ -1,0 +1,17 @@
+[
+    {
+        "name":"user1",
+        "password":"111",
+        "token":"@user1!#^"
+    },
+    {
+        "name":"user2",
+        "password":"222",
+        "token":"@user2!#^"
+    },
+    {
+        "name":"user3",
+        "password":"333",
+        "token":"@user3!#^"
+    }
+]

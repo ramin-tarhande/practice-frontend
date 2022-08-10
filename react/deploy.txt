@@ -1,0 +1,13 @@
+
+npm run build
+
+don't use yarn!
+
+paths:
+package.json:
+    "homepage": "http://jaqulpaqul.ir/rea",
+
+
+<BrowserRouter basename={`${process.env.PUBLIC_URL}`}>  (App.js)
+
+adjustPath for dynamic file load from public folder (check localApi.js)
