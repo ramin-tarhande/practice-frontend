@@ -1,0 +1,133 @@
+@use '../common';
+
+.latest-sidebar-container{
+    $py:50px;
+
+    padding-top: $py;
+    padding-bottom: $py;
+
+    @include common.dyn-container-width;
+    // $px:20px;
+    // $px-lg:4%;
+
+    // padding-left: $px;
+    // padding-right: $px;
+    // @media (min-width: 1200px) { 
+    //     padding-left: $px-lg;
+    //     padding-right: $px-lg;
+    // }
+}
+
+//$breakpoint:1120px;
+$breakpoint:common.$container-breakpoint;
+
+.latest{
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6rem;
+    //background-color: lightblue;
+
+    @media (min-width: $breakpoint) { 
+        width: 70%;
+    }
+
+    &__title{
+        font-size: 23px;
+        font-weight: 500;
+        text-align: center;
+
+        @media (min-width: $breakpoint) { 
+            text-align: start;
+            margin-inline-start: 1.5rem;
+        }
+    }
+
+    &__cards{
+        padding: 0;
+        border: 0;
+        margin: 0;
+        margin-top: 2rem;
+        width: 100%;
+        //background-color: gray;
+    }
+
+    &__load-more-btn {
+        height: 42px;
+        border-radius: 21px;
+        background-color: black;
+        border: 0;
+        color: white;
+        font-size: 12px;
+        font-weight:400;
+        letter-spacing: 2px;
+        padding: 0 27px;
+    }
+}
+
+.latest-card{
+
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    //border: 1px solid black;
+    //box-sizing:border-box;
+    
+    &>*{
+        width: 100%;
+    }
+
+    &__img-container
+    {
+        @include common.child-img-hover-scale;
+    }
+    &__img{
+        height: 80vw;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @media (min-width: 768px) { 
+        &__img{
+            height: 29vw;
+        }
+    }
+
+        &__title{
+        @include common.silent-links;
+        @include common.hover-color1;
+        font-size: 26px;
+        font-weight: 600;
+        margin-top: 1em;
+    }
+
+    &__category{
+        &-link{
+            @include common.link-colors(common.$color1);
+            @include common.link-hover-underline;
+        }
+        .latest-card__comments{
+            @include common.silent-link;
+        }
+        margin-top: .6em;
+        font-size: 11px;
+        text-transform: uppercase;
+
+        
+    }
+
+    &__comments{
+        font-size: 12px
+    }
+
+    &__more{
+        @include common.link-colors(black,common.$color1);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        //text-decoration-color:common.$color1;
+        &:link{
+            text-underline-offset: .7em;
+        }
+    }
+}

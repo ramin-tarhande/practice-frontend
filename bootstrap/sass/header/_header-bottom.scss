@@ -1,0 +1,64 @@
+@use '../common';
+
+.header-bottom{
+    //height: 8vw;
+    height: 90px;
+}
+
+.studio-texts{
+    text-decoration: none;
+    color: black;
+    padding-inline-start: common.$header-text-margin;
+    &:hover{
+        cursor: pointer;
+        color: black;
+    }
+
+    &__line1{
+        font-size: 32px;
+    }
+
+    &__line2{
+        font-size: 11px;
+        font-weight: 600;
+        line-height: .2;
+        margin-bottom: 1em;
+    }
+}
+
+.search-form{
+    border-radius: 2rem;
+    border:1px solid #eee;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    &__input{
+        margin: 0 15px 0 7px;
+        width: 120px;
+        height: 1.8em;
+        border:none;
+    }
+    svg{
+        width: 16px;
+        margin-inline-start: 12px;
+    }
+}
+
+.search-svg-only{
+    svg{
+        width: 18px;
+        margin-inline-start: 12px;
+        margin-bottom: 5px;
+    }
+}
+
+.menu-symbol{
+    &__svg{
+        height: 14px;
+        margin-inline-start: 20px;
+        margin-inline-end: 35px;
+        margin-bottom: 7px;
+    }
+}

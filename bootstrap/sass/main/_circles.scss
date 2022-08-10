@@ -1,0 +1,66 @@
+@use '../common';
+
+.circles{
+    background-color: #FCF9F5;
+    margin-top: 75px;
+    padding: 45px 0;
+    
+    
+
+    .my-row{
+        //border: 1px solid red;
+        //width: auto;
+        @include common.dyn-container-width;
+    }
+
+    $dimension:150px;
+    $dimension-lg:100px;
+
+    $c1:lighten(common.$color1,30%);
+    $c2:lighten(common.$color1,10%);
+    &__card{
+        @include common.silent-links;
+        width: $dimension;
+        letter-spacing: 1px;
+        margin: 0 auto;
+        
+        transition: all 1s;
+        text-decoration-color: $c1;
+        &:hover{
+            text-decoration: underline;
+            text-decoration-thickness: 6px;    
+            text-decoration-color: $c2;
+        }
+    }
+
+    &__img{
+        width: $dimension;
+        height: $dimension;
+        
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    //992px
+    @media (min-width: 1110px) { 
+
+        &__card{
+            width: $dimension-lg;
+        }
+    
+        &__img{
+            width: $dimension-lg;
+            height: $dimension-lg;
+        }
+
+        .my-row > * {
+            width: 12.5%;
+        }
+    }
+ 
+    &__text{
+        font-size: 13px;
+        text-align: center;
+        margin-top: 5px;
+    }
+}

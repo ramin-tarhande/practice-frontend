@@ -1,0 +1,33 @@
+@use '../common';
+
+.header-menu{
+    background-color: #111111;
+    height: 42px;
+    padding-inline-start: common.$header-text-margin;
+
+    .nav-link{
+        padding-inline-end: 0 !important;
+    }
+    
+    .nav-link{
+        color: #ccc;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    &__social-media{ 
+        a{
+            margin-inline-start: 30px;
+            svg{
+                width: 15px;
+                fill: #ccc;
+                &:hover{
+                    fill: #eee;
+                }
+            }
+        }
+    }
+    
+}
+
+

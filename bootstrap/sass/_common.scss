@@ -1,0 +1,120 @@
+$color1:#4FD675;
+//$color1:purple;
+
+$header-text-margin:120px;
+
+@mixin card-overlay-texts{
+    & * {
+        color: white;
+    }
+}
+
+@mixin arrow-down($size,$color) {
+    $dim:$size;
+    width: 0; 
+    height: 0; 
+    border-left: $dim solid transparent;
+    border-right: $dim solid transparent;
+    border-top: $dim solid $color;
+    margin: 0 auto;
+}
+
+.sb-title{
+    border: .1rem solid $color1;
+    font-size: 12px;
+    font-weight:700;
+    letter-spacing: 3px;
+    margin: 0;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center
+}
+
+.sb-arrow{
+    @include arrow-down(5px,$color1);
+}
+
+@mixin silent-link($color:inherit) {
+    color: $color;
+    &:link{
+        text-decoration: none;
+    }
+}
+
+@mixin silent-links($color:inherit) {
+    a{
+        @include silent-link($color);
+    }
+}
+
+
+@mixin link-colors($color,$underline-color:null) {
+        color: $color;
+        &:hover{
+            color: $color;
+        }
+        @if ($underline-color) {
+            text-decoration-color:$underline-color;
+        }
+        @else{
+            text-decoration-color:$color;
+        }
+}
+
+@mixin link-hover-underline() {
+    &:link{
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+            text-underline-offset: 4px
+        }
+    }
+}
+
+
+@mixin hover-color1{
+    &:hover{
+        color: $color1;
+    }
+}
+
+//$container-breakpoint:1200px;
+$container-breakpoint:1120px;
+
+@mixin dyn-container-width{
+    //width: 85%;
+    $px:20px;
+    width: 100%;
+    padding-left: $px;
+    padding-right: $px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 600px) { 
+        $px-sm:30px;
+        padding-left: $px-sm;
+        padding-right: $px-sm;
+    }
+
+    @media (min-width: $container-breakpoint) { 
+        padding-left: 0;
+        padding-right: 0;
+        width: 1020px;
+    }
+}
+
+@mixin child-img-hover-scale{
+    overflow:hidden;
+    img{
+        transition: all .7s;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+}
+
+@mixin center-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

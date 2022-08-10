@@ -1,0 +1,70 @@
+@use '../common';
+
+.today{
+
+    @include common.dyn-container-width;
+    @include common.silent-links;
+
+    &__title{
+        text-align: center;
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    &__card{
+        
+        a{
+            position: relative;
+        }
+    }
+
+    &__img-container{
+        @include common.child-img-hover-scale;
+        //border: 1px solid black;
+    }
+
+    &__overlay{
+        position: absolute;
+      
+        left: 0;
+        top: 10vw;
+        width: 100%;
+        text-align: center;
+                    
+        .card-title{
+            font-size: 24px;
+            font-weight: 700;
+
+            @media (min-width: 992px) { 
+                font-size: 36px;
+            }
+        }
+
+        .today__category{
+
+            .today__category-link{
+                font-size: 11px;
+                font-weight: bold;
+                @include common.link-hover-underline;
+            }
+    
+            .today__comments{
+                font-size: 12px;
+                @include common.silent-link;
+            }
+        }
+        
+        //border: 1px solid black;
+    }
+
+    &__desc{
+        text-align: center;
+    }
+    
+    img{
+        height: 32vw;
+        filter: brightness(75%);
+        object-fit: cover;
+
+    }
+}

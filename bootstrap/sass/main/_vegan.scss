@@ -1,0 +1,22 @@
+@use '../common';
+
+.vegan{
+    @include common.silent-links;
+
+    &__img{
+        height: 80px;
+        width: 80px;
+    }
+
+    &__name{
+        @include common.hover-color1;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__time{
+        color: gray;
+        font-size: 13px;
+    }
+    
+}

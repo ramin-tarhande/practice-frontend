@@ -1,0 +1,48 @@
+@use '../common';
+$header-color:#7ba93d;
+
+.header{
+    padding: 0;
+}
+
+.header-top{
+    background-color: #262626;
+    height: 45px;
+}
+
+.logo{
+    &__pic{
+        height: 15px;
+        margin-inline-end: 1px;
+        margin-inline-start: 12px;
+    }
+
+    text-decoration: none;    
+
+    @mixin text{
+        margin-bottom: 5px
+    }
+
+    &__text1{
+        @include text;
+        color: white;
+    }
+    
+    &__text2{
+        @include text;
+        color: $header-color;
+        font-weight: 400;
+    }
+}
+
+.buy-btn{
+    background-color: $header-color;
+    font-size: 14px;
+    padding: 3px 17px 5px 17px;
+    outline: none;
+    border: 0;
+    color: white;
+    //display: table-cell;
+    //box-sizing: border-box;
+    //vertical-align:top !important;
+}

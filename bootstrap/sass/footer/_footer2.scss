@@ -1,0 +1,28 @@
+@use '../common';
+
+
+.footer2{
+    $color:white;
+    background-color: black;
+    color: $color;
+    padding: 0;
+    line-height: .8em;
+    
+    &__nav{
+        @include common.silent-links($color);
+        
+        font-size:13px;
+        .nav-link{
+            @include common.hover-color1;
+        }
+    }
+
+    &__company{
+        font-size: 12px;
+        text-align: end;
+    }
+
+    &__heart{
+        fill: red;
+    }
+}

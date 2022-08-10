@@ -1,0 +1,58 @@
+@use '../common';
+
+.featured{
+    @include common.silent-links;
+
+    &__item{
+        padding-bottom: 2.8rem;
+        margin-bottom: 5px;
+        
+        transition: all 1s;
+
+        background-color: #f9f9f9;
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-image:none;
+        
+        &:hover{
+            & *{
+                color: white;
+            }
+        }
+
+        &:nth-child(1):hover{
+            //border: 3px solid blue;
+            background-image: url('../../images/f1.jpg');
+        }
+        &:nth-child(2):hover{
+            background-image: url('../../images/f2.jpg');
+        }
+        &:nth-child(3):hover{
+            background-image: url('../../images/f3.jpg');
+        }
+    }
+
+    &__number{
+        padding-top: 2.1rem;
+        color: common.$color1;
+        font-size: 23px;
+        font-weight: 600;
+        width: 20%;
+        text-align: center;
+    }
+
+    &__description{
+        padding-top: 2.4rem;
+        padding-inline-end: 3em;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__date{
+        font-size: 12px;
+        line-height: .7em;
+    }
+
+
+}

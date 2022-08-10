@@ -1,0 +1,50 @@
+@use '../common';
+
+.footer1{
+    @include common.silent-links;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow:hidden;
+    position: relative;
+
+    &__pics{
+        
+        &>div{
+            padding: 0;
+            @include common.child-img-hover-scale;
+
+            img{
+                height: 33vw;
+                @media (min-width: 576px) { 
+                    height: 17vw;
+                }
+                width: 100%;
+
+                
+            }
+        }
+    }
+
+    &__follow-me{
+        @include common.center-overlay;
+        $dimention:115px;
+        background-color: white;
+        opacity: 90%;
+        border-radius: 50%;
+        width: $dimention;
+        height: $dimention;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 600;
+        
+        span{
+            display: block;
+            line-height: 1.1em;
+        }    
+    }
+}

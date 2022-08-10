@@ -1,0 +1,3 @@
+sass --watch sass/styles.scss:css/styles.css
+
+https://themeforest.net/item/tinysalt-personal-food-blog-wordpress-theme/26294668

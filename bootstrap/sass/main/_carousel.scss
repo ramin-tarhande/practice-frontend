@@ -1,0 +1,78 @@
+@use '../common';
+
+.food-carousel{
+
+    padding: 0;
+    @include common.silent-links;
+    
+    
+    .carousel-item{
+        img{
+            //height: 51vw;  
+            height: 550px;  
+            object-fit:cover;
+            filter: brightness(65%);
+
+            // @media (min-width: 1130px) { 
+            //     height: 560px;  
+            // }
+        }
+    }
+
+    .carousel-caption{
+        top: 210px;
+    }
+ 
+    &__name{
+        font-size: 54px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    &__category{
+        $color:common.$color1;
+        color: $color;
+        a{
+            @include common.link-colors($color);
+            @include common.link-hover-underline();
+        }
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+
+    &__icons{
+        //border: 1px solid yellow;
+        font-size: 14px;
+        //display: inline-block !important;
+        &>*{
+            margin: 0 .6em;
+        }
+    }
+
+    .carousel-indicators {
+        background-color: white;
+        width: 90%;
+        margin: auto auto -6vw auto;
+        height: auto;  
+        border: 2px solid white;
+
+        & [data-bs-target] {
+            margin: 0 2px;
+            height: auto;
+            flex: auto;
+            opacity: 1;
+            border: 0;
+
+            & img{
+                height: 12vw;  
+                width: 100%;
+                filter: brightness(50%);
+                object-fit: cover;
+            }
+
+            &.active img{
+                filter: brightness(100%);
+            }
+        }
+    }
+
+}

@@ -1,0 +1,81 @@
+@use '../common';
+
+.sidebar{
+    width: 100%;
+    
+    @media (min-width: 630px) { 
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: common.$container-breakpoint) { 
+        width: 300px;
+    }
+}
+
+.alex{
+    //background-color: pink;
+    
+    &__profile{
+        border-radius: 50%;
+        //border: 1px dashed #1d1;
+        border: 1px dashed common.$color1;
+        padding: 4px;
+    }
+
+    &__profile-img{
+        border-radius: 50%;
+        width: 185px;
+        //height: 200px;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__title{
+        margin-top: 10px;
+        font-size: 22px;
+    }
+
+    &__text{
+        font-size: 14px;
+    }
+
+    &__social-media{ 
+        margin-top: 5px;
+        padding: 0 .3rem;
+
+        a{
+            margin:0 .3rem;
+            svg{
+                width: 21px;
+                fill: black;
+                &:hover{
+                    fill: common.$color1;
+                }
+            }
+        }
+    }
+
+    &__btn2{
+        height: 42px;
+        border-radius: 21px;
+        background-color: common.$color1;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        padding: 0 30px;
+        margin-top: 20px;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+
+    &__book{
+        border: 0;
+        padding: 0;
+        margin: 70px 0 0 0;
+        width: 100%;
+    }
+}

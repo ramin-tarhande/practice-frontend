@@ -1,0 +1,50 @@
+@use '../common';
+
+.subscribe2{
+    padding: 2.3rem 0 5rem 0;
+    border: 1px solid #ccc;
+
+    &__title{
+        margin-top: 35px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    &__description{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__input{
+        background-color: #f4f4f4;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 2em;
+        width: 25em;
+        outline: none;
+    }
+
+    &__submit{
+        $pd:2.7em;
+        padding-left: $pd;
+        padding-right: $pd;
+        color: white;
+        background-color: darken(common.$color1,8%);
+        font-size: 11px;
+        font-weight: bold;
+        height: 40px;
+        letter-spacing: 3px;
+        border: 0;
+        box-shadow: none;
+        border-radius: 2em;
+        margin-inline-start: -4em;
+    }
+
+    &__terms{
+        font-size: 16px;
+        //font-weight: 600;
+        a{
+            color: inherit;
+        }
+    }
+}
