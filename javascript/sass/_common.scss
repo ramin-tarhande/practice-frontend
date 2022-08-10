@@ -1,0 +1,101 @@
+
+// app theme:
+//$border-color:#77a;
+//$back-color:#aaf;
+$border-color:#970;
+$back-color:#79d;
+$btn-backcolor:#7c7;
+$link-backcolor:orange;
+//$link-backcolor:#fb7;
+$btn-color:black;
+$title-color:yellow;
+$th-color:#225;
+$light-color:#ccf;
+$input-backcolor:#e0e0ff;
+$container-border-radius:1rem;
+$container-border-thickness:2px;
+$btn-box-shadow:rgba($color: darken($border-color,15), $alpha: .6);
+
+$containers-top-margins:10vh;
+
+body{
+    background-color: #eef5ff;
+    //font-size: 5px;
+}
+
+.container{
+    margin: $containers-top-margins auto;
+    width: fit-content;
+    
+    background-color: $back-color;
+    border: $container-border-thickness solid $border-color;
+    border-radius: $container-border-radius;
+}
+
+.title{
+    font-size: 1.2rem;
+    color: $title-color;
+}
+
+.btn {
+    color: $btn-color;
+
+    border-radius: 1em;
+
+    //display: block;
+
+    text-align: center;
+    text-decoration: none;
+
+    background-color: lightgray;
+    //padding: .5em 1em;
+
+    letter-spacing: 1.5px;
+    height: fit-content;
+    
+    box-sizing: border-box;
+
+    line-height: 2;
+}
+
+a.btn{
+    background-color: $link-backcolor;
+}
+
+button.btn{
+    background-color: $btn-backcolor;
+    cursor: pointer;
+}
+
+.btn--big{
+    font-size: 2vw;
+
+    padding: .3em 1.3em;
+        
+    //font-size: 1.4rem;
+    
+    font-weight: 500;
+        
+    box-shadow: 3px 3px $btn-box-shadow;
+    
+    border: 2px solid $border-color;
+}
+
+.btn--small{
+    
+    padding: .4em 1.5em;
+    
+    font-size: 1rem;
+    
+    border: 1px solid $border-color;
+}
+
+.text-input{
+    display: block;
+    width: 15rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: $input-backcolor;
+    padding-inline-start: .3em;
+}
+

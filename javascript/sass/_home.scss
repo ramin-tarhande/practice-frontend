@@ -1,0 +1,22 @@
+@use './common.scss';
+
+.app-name{
+    font-size: 20px;
+    font-style: italic;
+    color: #ffd;
+    text-align: center;
+    text-shadow: 1px 2px #880;
+}
+
+.nav{
+    list-style: none;
+    padding-inline-start: 0;
+    //width: fit-content;
+    //border: 1px solid red;
+    //width: 12vw;
+    //width: 9rem;
+    *>{
+        box-sizing: border-box;
+    }
+}
+

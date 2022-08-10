@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tac-toe</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container px-12">
+        <p class="app-name">Tic-Tac-Toe</p>
+        <nav class="nav mt-3 mb-5 mt-2 width-fit-content mx-auto">
+            <button class="btn btn--big w-100 d-block" onclick="startToPlay()" type="button">Start</button>
+            <a class="btn btn--big mt-2 w-100 d-block" href="./pages/scores.html">Scores</a>
+            <a class="btn btn--big mt-2 w-100 d-block" href="./pages/setup.html">Setup</a>
+        </nav>
+    </div>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/gameStg.js"></script>
+    <script>
+        function startToPlay(){
+            clearGameStorage();
+            redirectTo('./pages/play.html')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@use './common.scss';
+
+.table{
+    border-collapse:collapse;
+
+    td, th{
+        border: 1px solid black;
+        padding: .7em 2em;
+        font-size: 1.2rem;
+    }
+
+    th{
+        color: common.$th-color;
+    }
+}
+

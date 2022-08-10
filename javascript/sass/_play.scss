@@ -1,0 +1,122 @@
+@use './common.scss';
+
+$dim:3;
+
+//$breakpoint:992px;
+$breakpoint:576px;
+
+$board-width:40vw;
+$cell-dim:calc($board-width/$dim);
+$cell-font-size:calc(2*$cell-dim/3);
+$cell-border-radius: calc($cell-dim/5);
+
+// board theme
+$cell-color:black;
+$wp-cell-color:#3a5;
+$cell-border-color:black;
+$margin-left:5vw;
+
+$cells-gap:0;
+
+
+.play-container{
+    margin-top: common.$containers-top-margins;
+    margin-left: $margin-left;
+
+    @media (min-width: $breakpoint) { 
+        display: grid;
+        //grid-template-columns: 70% 20%;
+        grid-template-columns: 13vw 65vw;
+    }
+}
+
+.play-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    //justify-content: space-around;
+    align-items:center;
+    
+    //border: 1px solid black;
+
+    &>a,&>button{
+        margin: 0 1vw;
+    }
+
+    margin-bottom: 5vh;
+
+    @media (min-width: $breakpoint) { 
+        flex-direction: column;
+        width: 13vw;
+
+        &>a,&>button{
+            width: 100%;
+            margin: 1vh 0;
+        }
+    }
+}
+
+.board{
+    
+    display: grid;
+    grid-template-columns: repeat(3,$cell-dim);
+    grid-auto-rows: $cell-dim;
+
+    width: fit-content;
+    //width: 60%;
+    gap: $cells-gap;
+    margin: 0 auto;
+    
+    //background-color: gray;
+    //border: 1px solid black;
+}
+
+.texts{
+    //border: 1px solid blue;
+    margin: 3vh auto;
+}
+
+.turn-text{
+    text-align: center;
+    //font-size: 2.2rem;
+    font-size: 4vw;
+}
+
+.win-text{
+    text-align: center;
+    //font-size: 3rem;
+    font-size: 5vw;
+    color: #7c8;
+}
+
+.draw-text{
+    text-align: center;
+    //font-size: 3rem;
+    font-size: 5vw;
+    color: brown;
+}
+
+.cell{
+    background-color: common.$light-color;
+    
+    text-align: center;
+    line-height: $cell-dim;
+
+    color: $cell-color;
+
+    font-family: sans-serif;
+    font-size: $cell-font-size;
+    
+    border: 1px solid $cell-border-color;
+    border-radius: $cell-border-radius;
+
+    cursor:crosshair;
+
+    user-select: none;
+}
+
+.cell--wp{
+    font-size: $cell-font-size;
+    color: $wp-cell-color;
+    //font-weight: bold;
+}

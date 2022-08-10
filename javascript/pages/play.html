@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="play-container mx-auto">
+        <div class="play-buttons">
+            <a      class="btn btn--big" href="../index.html">Home</a>
+            <a      class="btn btn--big" href="./scores.html">Scores</a>
+            <button class="btn btn--big" onclick="reset()" type="button">Reset</button>
+        </div>
+
+        <div class="board">
+
+        </div>
+        
+        <div></div>
+        <div class="texts">
+            <p class="turn-text"></p>        
+            <p class="win-text"></p>        
+            <p class="draw-text"></p>        
+        </div>
+    </div>
+    
+    <script src="../js/common.js"></script>
+    <script src="../js/players.js"></script>
+    <script src="../js/scores.js"></script>
+    <script src="../js/starter.js"></script>
+    <script src="../js/gameStg.js"></script>
+    <script src="../js/matrix.js"></script>
+    <script src="../js/game.js"></script>
+    <script>
+        
+        initPlay(document.querySelector('.board'),document.querySelector('.turn-text'),
+                 document.querySelector('.win-text'),document.querySelector('.draw-text'));
+        // document.getElementsByClassName('cell').addEventListener('click');
+        function reset(){
+            resetGame();
+        }
+    </script>
+
+</body>
+</html>

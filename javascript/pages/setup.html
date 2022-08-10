@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container px-6">
+        <form>
+            <p class="title">Enter name of players:</p>
+            <input class="text-input mt-1" type="text" id="player1" placeholder="player#1">
+            <input class="text-input mt-1" type="text" id="player2" placeholder="player#2">
+            <button class="btn btn--small mx-auto mt-2 mb-2 d-block" onclick="save()" type="button">
+                Save
+            </button>
+        </form>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/players.js"></script>
+    <script>
+        const fieldIds=['player1','player2'];
+
+        showPlayers(fieldIds);
+
+        function save(){
+            savePlayers(fieldIds);
+            redirectToHome();
+        }
+    </script>
+</body>
+</html>
