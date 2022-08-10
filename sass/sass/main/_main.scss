@@ -1,0 +1,16 @@
+@use './contact-info';
+@use './submission';
+
+.main{
+    background-image: url('../images/back.png');
+    height: 480px;
+    padding: 60px 50px;
+}
+
+.card{
+    background-color: #fbfbfb;
+    display: flex;
+    height: 300px;
+    padding: 60px 50px;
+}
+

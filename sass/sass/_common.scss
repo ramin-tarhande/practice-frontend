@@ -1,0 +1,11 @@
+$primary-color: #2A2871;
+$secondary-color: #EFAB48;
+
+@mixin setProp($prop,$ltr-value,$rtl-value) {
+
+    #{$prop}:$ltr-value;
+
+    [dir=rtl] &{
+        #{$prop}:$rtl-value;
+    }
+}

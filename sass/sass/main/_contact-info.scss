@@ -1,0 +1,56 @@
+@use '../common';
+
+$title-color:#008;
+$mid-text-color:#333;
+$mid-icon-color:lighten($mid-text-color,20%);
+
+.contact-info{
+    //padding-right: 50px;
+    padding-inline-end: 50px;
+    width: 400px;
+    
+    &__title{
+        color: $title-color;
+        font-size: 30px;
+        margin-top: 0;
+        @include common.setProp(text-align,left,center);
+    }
+
+    @mixin item{
+        margin-bottom: 35px;
+        color: $mid-text-color;
+        & i{
+            font-size: 18px;
+            color: $mid-icon-color;
+            margin-inline-end: 5px;
+            //margin-right: 5px
+        }
+    }
+
+    &__tel{
+        @include item;
+        font-size: 20px;
+    }
+    
+    &__email{
+        @include item;
+        font-size: 20px;
+    }
+    
+    &__address{
+        @include item;
+        font-size: 16px;
+    }
+
+    &__socialmedia{
+        margin-top: 35px;
+        
+        & i{
+            font-size: 32px;
+            color: $title-color;
+            //margin-right: 10px;
+            margin-inline-end: 10px;
+        }
+    }
+}
+

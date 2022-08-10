@@ -1,0 +1,34 @@
+@use './common';
+
+.menu{
+    background-color: common.$primary-color;
+    height: 80px;
+    color: #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 22px;
+    font-weight:200;
+    margin: 0;
+}
+
+.menu__text{
+    margin-inline-start: 20px;
+    //margin-left: 20px;
+}
+
+.sandwich{
+    margin-inline-start: auto;
+    margin-inline-end: 60px;
+    //margin-left: auto;
+    //margin-right: 60px;
+
+    & i{
+        color: white;
+        font-size: 25px;
+    }
+}
+
+
+
+

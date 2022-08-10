@@ -1,0 +1,45 @@
+@use '../common';
+
+.submission{
+    width: 500px;
+    flex-grow: 1;
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    @mixin field{
+        width: auto;
+        height: 25px;
+        margin-bottom: 10px;
+        background-color: common.$secondary-color;
+        padding: 10px;
+        color: white;
+        font-size: 16px;
+        border: none;
+    }
+
+    &__name{
+        @include field;
+    }
+    
+    &__email{
+        @include field;
+    }
+    
+    &__message{
+        @include field;
+        height: 100px;
+    }
+
+    &__btn{
+        background-color: common.$primary-color;
+        font-size: 16px;
+        font-weight: lighter;
+        padding: 15px;
+        color: white;
+        border:none;
+    }
+}
+
