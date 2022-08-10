@@ -1,0 +1,51 @@
+@use './common.scss';
+
+.aside-l{
+    width: 15rem;
+}
+
+.subject1{
+    color: white;
+    background-color: common.$theme-color6;
+    &__title{
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    &__text{
+        font-size: .5rem;
+        font-weight: 100;
+        line-height: 2em;
+    }
+    &__btn{
+        font-size: .6rem;
+        border-radius: 1.2em;
+    }
+}
+
+.alist{
+    background-color: common.$theme-color2;
+    color: white;
+    &__title{
+        font-size: .8rem;
+    }
+
+    &_ul{
+        font-size: .4rem;
+        font-weight: 100;
+        list-style: none;
+        padding: 0;
+        li{
+            line-height: 3em;
+
+            &:not(:last-child)::after  {
+                display: block;
+                content: "";
+                height: 1px;
+                width: 100%;
+                margin: 0;
+                background: rgba($color: white, $alpha: 0.1);
+            }
+        }
+    }
+}

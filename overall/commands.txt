@@ -1,0 +1,2 @@
+sass --watch sass/page1.scss:build/page1.css
+sass --watch sass/page2.scss:build/page2.css

@@ -1,0 +1,102 @@
+$theme-color1:#174b44;
+$theme-color1-light:#36645e;
+$theme-color2:#596758;
+$theme-color3:#828282;
+$theme-color4:#313e37;
+$theme-color5:#0c221c;
+$theme-color6:#c39a3e; 
+
+$inline-margin:5%;
+
+@mixin trace-border($color:yellow) {
+    border: 1px solid $color;
+}
+
+.std-padding {
+    padding-inline-start: $inline-margin;
+    padding-inline-end: $inline-margin;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.block-center-h{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin silent-link($color:inherit) {
+    color: $color;
+    &:link{
+        text-decoration: none;
+    }
+    &:hover{
+        color: $color;
+    }
+}
+
+@mixin silent-child-links($color:inherit) {
+    a{
+        @include silent-link($color);
+    }
+}
+
+@mixin px-0-m {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@mixin px($v) {
+    padding-left: $v;
+    padding-right: $v;
+}
+
+@mixin py($v) {
+    padding-top: $v;
+    padding-bottom: $v;
+}
+
+@mixin mx($v) {
+    margin-left: $v;
+    margin-right: $v;
+}
+
+.inline-list{
+    li{
+        display: inline;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.border-simple{
+    border: 1px solid #ddd;
+}
+
+.border-simple2{
+    border: 1px solid blue;
+}
+
+@mixin centertext-height($height) {
+    height: $height;
+    line-height: $height;
+}
+
+@mixin circle($dim) {
+    width: $dim;
+    height: $dim;
+    border-radius: 100%;
+}
+
+@mixin dimension($dim) {
+    width: $dim;
+    height: $dim;
+}
+
+.sep-yellow-line{
+    width: 3rem;
+    border-top: 2px solid #edbf47;
+    opacity: 100;
+}

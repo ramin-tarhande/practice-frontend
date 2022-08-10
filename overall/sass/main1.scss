@@ -1,0 +1,19 @@
+@use './common.scss';
+
+.main-text{
+    overflow: hidden;
+    //height: 30rem;
+    //padding-bottom: 0;
+    &>*{
+        margin-bottom: 2em;
+    }
+    p{
+        font-size: .6rem;
+        font-weight: 500;
+    }
+}
+
+.ielts-img{
+    width: 16rem;
+}
+

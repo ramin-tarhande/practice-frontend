@@ -1,0 +1,26 @@
+@use './common.scss';
+
+.subject2 {
+    color: white;
+    background-color: common.$theme-color6;
+    //@include common.px(5%);
+    padding-inline-end: 5%;
+    padding-inline-start: common.$inline-margin;
+    @include common.py(2em);
+
+    &__title{
+        font-size: 1rem;
+    }
+
+    &__text{
+        font-size: .7rem;
+        font-weight: 100;
+        line-height: 2em;
+    }
+    &__btn{
+        font-size: .6rem;
+        border-radius: 1.2em;
+        background-color: inherit;
+        color: inherit;
+    }
+}

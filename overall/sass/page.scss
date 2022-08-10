@@ -1,0 +1,35 @@
+@use './top-band.scss';
+@use './courses.scss';
+@use './partners.scss';
+@use './footer.scss';
+
+@font-face {
+    font-family: 'IranYekan';
+    src: url('../fonts/IranYekan/IranYekanRegular.eot');
+    src: url('../fonts/IranYekan/IranYekanRegular.woff') format('woff');
+    src: url('../fonts/IranYekan/IranYekanRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IranYekan-eb';
+    src: url('../fonts/IranYekan/IranyekanExtrabold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+:root{
+    direction: rtl;
+    //font-size: 36px;
+}
+
+body{
+    font-family: 'IranYekan';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

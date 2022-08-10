@@ -1,0 +1,46 @@
+@use './common.scss';
+
+.courses2   {
+    background-color: #928a74;
+    color: white;
+    
+    &__title{
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 2em;
+    }
+
+    &__subtitle{
+        font-size: .7rem;
+        font-weight: 400;
+    }
+}
+
+.k-card{
+    @include common.silent-child-links;
+    width: 15em;
+    margin-bottom: 2em;
+    margin-inline-end: 2em;
+    &__img{
+        @include common.dimension(3.1em);
+    }
+
+    &__title{
+        font-size: .7rem;
+        font-weight: 500;
+    }
+
+    &__body{
+        font-size: .5rem;
+        font-weight: 100;
+        color: rgba($color: white, $alpha: .7);
+    }
+
+    &__footer{
+        font-size: .6rem;
+        //font-weight: 500;
+        img{
+            @include common.dimension(1.1em);
+        }
+       }
+}

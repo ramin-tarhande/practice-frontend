@@ -1,0 +1,89 @@
+@use './common.scss';
+
+.issues{
+    background-color: common.$theme-color6;
+    color: white;
+
+    // .row{
+    //     box-sizing: content-box;
+    // }
+    &__title{
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 2em;
+        color: inherit;
+    }
+
+    &__subtitle{
+        font-size: .8rem;
+        font-weight: 400;
+    }
+
+    &__link{
+        @include common.silent-link(common.$theme-color6);
+        padding: .8em 2em;
+        border-radius: 2em; 
+        background-color: white;
+        font-size: .6rem;
+        font-weight: 700;
+        //vertical-align: middle;
+    }
+}
+    
+.j-card{
+    //$width:8em;
+    @include common.silent-child-links(black);
+    background-color: white;
+    color: black;
+    width: 10.5em;
+
+    &>a{
+        width: inherit;   
+    }
+    
+    &__img{
+        height: 7em;
+        width: inherit;
+    }
+
+    &__category{
+        font-size: .6rem;
+        color: #555;
+    }
+    &__title{
+        
+        font-size: .7rem;
+        font-weight: 600;
+    }
+
+    &__date{
+        font-size: .6rem;
+        color: #555;
+
+        &::before{
+            content: url('../images/clock2.png');
+            @include common.dimension(1px);
+            max-width: 1px;
+            margin-inline-end: 1em  ;
+        }
+    }
+}
+
+
+.date{
+    //@include common.trace-border(black);
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+
+    &__value{
+        font-size: .5rem;
+        color: #555;
+        font-weight: 700;
+    }
+
+    &__img{
+        @include common.circle(.9rem);
+        margin-inline-end: .4rem;
+    }
+}

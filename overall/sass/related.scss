@@ -1,0 +1,88 @@
+@use './common.scss';
+
+.related{
+    &__title{
+        @include common.px(1em);
+        background: common.$theme-color2;
+        color: white;
+        height: 2em;
+        line-height: 2em;
+        width: fit-content;
+        font-size: .8rem;
+        font-weight: 500;
+    }
+
+    &__body{
+        padding: 1rem;
+        padding-inline-end: 10%;
+    }
+}
+
+.r-card{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 1em;
+    &__img{
+        //@include common.trace-border(black);
+        height: 6.5em;
+        object-fit: cover;
+        min-width: 9em;
+        display: inline-block
+    }
+
+    &__body{
+        //@include common.trace-border(black);
+        margin-inline-start: .7rem;
+        width: auto;
+    }   
+    &__title{
+        font-size: .7rem;
+        color:common.$theme-color2;
+    }
+
+    &__text{
+        font-size: .6rem;
+    }
+
+    &__footer{
+        display: flex;
+        align-items: center;
+        height: .9em;
+
+        &::before{
+            display: inline-block;
+            content: "";
+            height: 100%;
+            width: .3em;
+            margin: 0;
+            margin-inline-end: .1em;
+            background-color: #c77000;
+        }
+    }
+
+    &__date{
+        font-size: .6rem;
+        font-weight: 700;
+        color: common.$theme-color3;
+    }
+
+    &__sep{
+        font-size: .6rem;
+        margin-inline-start: .5em;
+        color: common.$theme-color2;
+        &::after{
+            content: "|";
+        }
+    }
+
+    &__more{
+        font-size: .6rem;
+        margin-inline-start: .5em;
+        @include common.silent-link(common.$theme-color2);
+        font-weight: 800;
+        &::after{
+            content: "ادامه خبر ...";
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@use './common.scss';
+
+.banner1{
+    //@include common.std-padding;
+    border: 0;
+    margin: 0;
+    background-image: url("../images/kids.png");
+    background-size:39em;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    
+    color: common.$theme-color1;
+
+    height: 12rem;
+
+    &__title{
+        font-weight: 900;
+        font-size: 1.2rem;
+        font-family: 'IranYekan-eb';
+    }
+
+    &__subtitle{
+        font-weight: 200;
+        font-size: .6rem;
+    }
+
+    &__ease-img{
+        //@include common.trace-border;
+        margin-inline-start: auto;
+        img{
+            height: 9em;
+        }
+    }
+}
+
+.squares{
+    //@include trace-border;
+    display: flex;
+    .square{
+        width: .5em;
+        height: .5em;
+        background-color: #959595;
+        margin-inline-end: .25em;
+    }
+    .square--active{
+        background-color: common.$theme-color1;
+    }
+}
+

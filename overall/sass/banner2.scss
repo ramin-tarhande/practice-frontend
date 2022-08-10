@@ -1,0 +1,54 @@
+@use './common.scss';
+
+.banner2{
+    margin: 0;
+    background-image: url("../images/p2-banner.png");
+    background-size:100% 100%;
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding-top: .5em;
+    padding-bottom: 2em;    
+    padding-inline-start: 6.5%;
+
+    &__ja{
+        height: 10em;
+    }
+
+    &__ease-img{
+        img{
+            height: 8.5em;
+            width: 6.5em;
+        }
+    }
+
+    &__start{
+        @include common.silent-link(common.$theme-color6);
+        padding: 1em 2em;
+        border-radius: 2em; 
+        background-color: white;
+        font-size: .6rem;
+        font-weight: 700;
+        //vertical-align: middle;
+    }
+}
+
+.nav3{
+    @include common.silent-child-links();   
+    border: 0;
+    font-size: .65rem;
+    font-weight: 800;
+
+    & *{
+        background: inherit;
+        font-size: inherit;
+    }
+
+    svg{
+        fill: black;
+        @include common.dimension(1.5em);
+        margin-bottom: 1px;
+    }
+}

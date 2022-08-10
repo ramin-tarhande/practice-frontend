@@ -1,0 +1,171 @@
+@use './common.scss';
+
+.courses{
+    background-color: common.$theme-color2;
+    color: white;
+    
+    &__title{
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 2em;
+    }
+
+    &__subtitle{
+        font-size: .7rem;
+        font-weight: 400;
+    }
+
+}
+
+.c-card{
+    $color:black;
+    color: $color;
+    @include common.px-0-m;
+    @include common.silent-child-links($color);
+    margin-bottom: 2rem;
+    //@include common.trace-border(red);
+    
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    align-items:center;
+    height: auto;
+    max-width: 14em;
+    background-color: white;
+    padding-bottom: .3em;
+
+    overflow: hidden;
+    border-radius: .5rem;
+
+    &__body{
+        @include common.px(.7em);
+    }
+
+    &__img{
+        object-fit:cover;
+        display: inline-block;
+        height: 8rem;
+        width: 100%;
+        //@include common.trace-border;
+    }
+
+    &__main{
+        //@include common.trace-border(black);
+        padding: .6rem 0 .8rem 0;
+        height: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title{
+        font-size: .7rem;
+        font-weight: 400
+    }
+
+    &__bottom-row{
+        //@include common.trace-border(black);
+        @include common.px-0-m;
+        height: 2em;
+        //display: inline-block;
+        display: flex;
+        //align-items: center;
+        padding-top: 0.3em;
+        //padding-left: 0;
+        //margin-inline-start: .6em;
+        padding-inline-start: .1em;
+        //padding-inline-end: 3em;
+        //margin: 100px;
+        border-top: 1px solid #ddd;
+        width: 100%;
+    }
+}
+
+.avatar{
+    //@include common.trace-border(black);
+    //margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    &__img{
+        @include common.circle(1.2rem);
+        object-fit:fill;
+        display: inline-block;
+    }
+    &__name{
+        padding-inline-start: .5em;
+        font-size: .5rem;
+        font-weight: 700;
+    }
+}
+
+.time{
+    //@include common.trace-border(black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__value{
+        font-size: .5rem;
+        font-weight: 700;
+    }
+
+    &__img{
+        @include common.circle(.9rem);
+        margin-inline-start: .2rem;
+    }
+}
+
+.score{
+    display: flex;
+    margin-inline-start: .3em;
+    justify-content: center;
+    //@include common.trace-border(black);
+    //align-items: center;
+    
+}
+
+.star{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: .8em;
+    //@include common.trace-border(black);
+
+    &-full{
+        @extend .star;
+        background-image: url('../images/star-full.png');
+    }
+    
+    &-half{
+        @extend .star;
+        background-image: url('../images/star-half.png');
+    }
+
+    &-empty{
+        @extend .star;
+        background-image: url('../images/star-empty.png');
+    }
+}
+
+.prices{
+    //@include common.trace-border(blue);
+    //margin-bottom: .5em;
+    //padding: .4em 0 .4em 0.7em;
+    padding-bottom: .3em;
+    &__original{
+        font-size: .7rem;
+        color: red;
+        text-decoration: line-through;
+        //@include common.trace-border(black);
+        text-align: center;
+    }
+
+    &__discounted{
+        font-size: .7rem;
+        //@include common.trace-border(black);
+        background-color: common.$theme-color4;
+        color: white;
+        padding: 0 .9em;
+        border-radius: .4em;
+    }
+}

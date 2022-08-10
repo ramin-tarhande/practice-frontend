@@ -1,0 +1,27 @@
+@use './common.scss';
+
+.partners{
+
+    color: common.$theme-color3;
+    font-weight: 900;
+
+    &__title{
+        font-size: .8rem;
+    }
+
+    &__subtitle{
+        font-size: .7rem;
+    }
+
+    a{
+        display: inline-block;
+        //width: fit-content;
+    }
+
+    img{
+        width: 6rem;
+        height: 3.5rem;
+        display: inline-block;
+        box-shadow: .2em 0 .9em 0 #ddd;
+    }
+}

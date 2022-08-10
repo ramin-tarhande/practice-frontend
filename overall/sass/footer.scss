@@ -1,0 +1,103 @@
+@use './common.scss';
+
+$ht-color:rgba($color: white, $alpha: .6);
+
+@mixin half-transparent-color {
+    color: $ht-color;
+}
+
+.footer{
+    @include common.silent-child-links;
+    background-color: common.$theme-color5;    
+    color: white;
+    //@include common.px(7%);
+    font-size: .6rem;
+
+    padding-top: 4em;
+    padding-bottom: 2em;
+    
+    &__title{
+        font-size: inherit;
+        font-weight: 600;
+        margin-bottom: 1.7em;
+    }
+
+    &__phone{
+        color: #1ea47d;
+        font-size: inherit;
+    }
+
+    &_col{
+        margin-bottom: 4em;
+        @include common.px(0);
+        //@include common.trace-border;
+    }
+
+    a,p{
+        @include half-transparent-color;
+    }
+}
+
+
+.address{
+    &__city{
+        font-size: .6rem;
+    }
+    &__detail{
+        font-size: .5rem;
+        font-weight: 100;
+        @include half-transparent-color;
+
+        svg{
+            height: .7rem;
+            width: auto;
+            margin: 0;
+        }
+    }
+}
+
+.email-form{
+    //@include common.trace-border;
+
+    input{
+        border-radius: 2em;
+        border: 0;
+        width: 100%;
+        max-width: 14em;
+    }
+    button{
+        @include common.circle(2.7em);
+        color:white;
+        vertical-align:middle;
+        background-color: #8aad3d;
+        border: 0;
+    }
+
+    svg{
+        @include common.dimension(.6rem);
+        //@include common.trace-border;
+    }
+}
+
+.social-media2{
+    margin-top: 2em;
+    display: flex;
+    justify-content:space-between;
+    max-width: 16em;
+    li{
+        svg{
+            fill:$ht-color;
+            height: .8rem;
+            width: auto;
+        }
+        //margin-inline-end: .7em;
+    }
+}
+
+.copyright{
+    background-color: common.$theme-color2;
+    color: white;
+    font-size: .5rem;
+    padding-inline-start: 20%;  
+    padding-inline-end: 8%;
+}
