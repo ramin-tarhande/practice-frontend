@@ -1,2 +1,2 @@
 # practice-frontend
-Projects for practicing different front-end technologies
+Projects for practicing different technologies needed for front-end development
